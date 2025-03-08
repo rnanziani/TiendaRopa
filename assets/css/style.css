@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+  --color-whiteBone: #F5F5F5;
+  --color-salmon: #EF7F6D;
+  --color-carmine-pink: #E94F37;
+  --color-spanish-pink: #F7BFB6;
+  --color-soap: #CDC3E6;
+  --color-blue-bell: #A491D2;
+  --color-pale-lavender: #D4DCFF;
+  --color-platinum: #EAEAEA;
+  --color-gray: #E0E0E0;
+  --color-dark-gray: #333;
+  --color-black: #000;
+  --color-yellow-ligth: #FFD166;
+  
+}
+
+/* Estilos generales */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-pale-lavender);
+  height: 100vh; /* Ocupa el 100% del alto de la ventana */
+}
+
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between; /* Distribuye el espacio entre los elementos */
+  align-items: center; /* Centra verticalmente los elementos */
+  background-color: var(--color-soap);
+  color: var(--color-dark-gray);
+  padding: 1rem;
+}
+
+/* Logo */
+.header-logo img {
+  height: 70px; /* Ajusta el tamaño del logo */
+  border-radius: 50%;
+}
+
+/* Título */
+.header-title {
+  margin: 0;
+  font-size: 2.4rem;
+  text-align: center;
+  flex: 1; /* Hace que el título ocupe el espacio restante */
+}
+
+/* Menú de navegación */
+.header-nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1rem; /* Espacio entre elementos del menú */
+}
+
+.header-nav-link {
+  font-size: 1.3rem;
+  color: var(--color-dark-gray);
+  text-decoration: none;
+}
+
+.header-nav-link:hover {
+  text-decoration: underline;
+}
+
+/* Main */
+.main {
+  flex: 1; /* Hace que el contenido ocupe el espacio restante */
+  padding: 1rem;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.product {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  width: 800px;
+}
+
+.product-image {
+  width: 800px;
+  height: 600px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.product-title {
+  font-size: 2rem;
+  margin: 0.5rem 0;
+}
+
+.product-price {
+  font-size: 1.5rem;
+  color: #333;
+  margin: 0.5rem 0;
+}
+
+.product-button {
+  display: flex;
+  justify-content: center; /* Centra el texto horizontalmente */
+  align-items: center; /* Centra el texto verticalmente */
+  background-color: #28a745;
+  width: 200px; /* Ancho del botón */
+  height: 40px; /* Alto del botón */
+  margin: 20px auto; /* Centra el botón en su contenedor */
+  font-weight: var(--font-weight-bold);
+  font-size: 1.2em;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Transición suave para el hover */
+}
+
+.product-button:hover {
+  background-color: var(--color-blue-bell); /* Cambia el color al pasar el mouse */
+}
+
+/* Estado Focus */
+.product-button:focus {
+  background-color: var(--color-yellow-ligth); /* Cambia el color al recibir foco */
+  outline: none; /* Elimina el borde predeterminado del foco */
+  color: var(--color-dark-gray);
+  box-shadow: 0 0 0 3px rgba(169, 145, 210, 0.5); /* Añade un sombreado para el foco */
+}
+
+/* Footer */
+.footer {
+  background-color: var(--color-soap);
+  color: var(--color-dark-gray);
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+.footer-text {
+  margin: 0;
+}
+
+/* Media queries para barra de navegacion resposivo*/
+@media (max-width: 768px) {
+  .header {
+      flex-direction: column; /* Cambia a disposición vertical */
+      align-items: flex-start; /* Alinea los elementos a la izquierda */
+  }
+
+  .header-title {
+      margin: 1rem 0; /* Agrega espacio arriba y abajo del título */
+      text-align: left; /* Alinea el título a la izquierda */
+  }
+
+  .header-nav-list {
+      flex-direction: column; /* Cambia el menú a vertical */
+      gap: 0.5rem; /* Reduce el espacio entre elementos */
+  }
+}
